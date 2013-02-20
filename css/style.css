@@ -1,0 +1,168 @@
+/* === CSS RESET === */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* === End of CSS RESET === */
+
+body{
+	background-color: #FFF;
+	font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+}
+
+*{ 	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box; 
+}
+
+header{
+	width: 100%;
+	height: 82px;
+	background-color:#3B5998;
+}
+
+header #logo{
+	background-image: url("https://fbstatic-a.akamaihd.net/rsrc.php/v2/yS/x/B1l0pVYCp2E.png");
+	background-position: 0 25px;
+	background-repeat: no-repeat;
+	height: 60px;
+	padding-top: 0;
+	width: 170px;
+}
+
+.wrapper{
+	position:relative;
+	width: 1200px;
+	margin: 0 auto;
+}
+
+#test{
+	float:right;
+}
+
+#test li{
+	padding-bottom: 10px;
+}
+
+#renderBtn {
+   	background-color: #5B74A8;
+    background-image: url("https://fbstatic-a.akamaihd.net/rsrc.php/v2/yA/x/MQLqXy_6l1n.png");
+    background-position: -352px -495px;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    border-color: #29447E #29447E #1A356E;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 13px;
+    padding: 2px 6px;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: top;
+    white-space: nowrap;
+}
+
+#renderBtn input{
+	background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+    color: #333333;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 13px;
+    margin: 0;
+    padding: 1px 0 2px;
+    white-space: nowrap;
+    color: white;
+}
+
+#renderBtn:active {
+    background: none repeat scroll 0 0 #4F6AA3;
+    border-bottom-color: #29447E;
+}
+
+.timezone{
+	float: left;
+	margin: -10px 10px 0 0;
+	width: 110px;
+}
+
+.timezone li{
+	list-style-type: none;
+	text-align: right;
+	font-weight: bold;
+	height: 30px;
+}
+
+.timezone li .hour{
+	color: #686868;
+	font-size: 14px;
+}
+
+.timezone li .time{
+	color: #A7A7A7;
+	font-size: 10px;
+	padding-left:5px;
+}
+
+#container{
+	position:relative;
+	padding: 0 10px;
+	width: 620px;
+	height: 720px;
+	border-left: 1px solid #D6D6D6;
+	margin: 20px 0 0 120px;
+	background-color: #ECECEC;
+}
+
+.element {
+	background-color: white;
+	border-left: 4px solid #4B6EA9;
+	position: absolute;
+	box-shadow: 0 0 0 1px #D5D5D5;
+    
+}
+
+.element .title{
+	color: #4B6EA9;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.element .location{
+	color: #797979;
+    font-size: 10px;
+    margin-left: 5px;
+    margin-top: 2px;
+}

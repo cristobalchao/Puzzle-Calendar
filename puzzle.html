@@ -22,6 +22,14 @@ body{
 	background-color: white;
 	position: absolute;
 }
+
+.element {    /*  All the options are important */
+	-webkit-transition: all 1000ms cubic-bezier(1,-0.22,0,1.12);    /*  You can modify your seconds to get a faster/lower animation speed */
+	-moz-transition: all 1000ms cubic-bezier(1,-0.22,0,1.12);
+	-o-transition: all 1000ms cubic-bezier(1,-0.22,0,1.12);
+	-ms-transition: all 1000ms cubic-bezier(1,-0.22,0,1.12);
+	transition: all 1000ms cubic-bezier(1,-0.22,0,1.12);
+}
 </style>
 
 <script>
@@ -60,8 +68,7 @@ var events = [
  {id : 3, start : 560, end : 620}, // an event from 6:20pm to 7:20pm 
  {id : 4, start : 630, end : 690} // an event from 7:10pm to 8:10pm 
 ];
-/*
-
+*/
 
 /** Puzzle **/
 var Puzzle = function(){
@@ -129,7 +136,7 @@ Puzzle.prototype = {
  				var _element = document.createElement("div"),
  					max = (!!this.input[this.grid[i][j].id-1].max)?this.input[this.grid[i][j].id-1].max:1,
  					widthElement = this.maxColumnWidth/max;
-
+ 				_element.className = "element";
  				$(_element).css({'top' : this.grid[i][j].start, 'width' : widthElement+'px', 'height' : parseInt(this.grid[i][j].end - this.grid[i][j].start), 'left' : i*widthElement}).addClass('element');
  				$(_element).appendTo($('#container'));
  			}
