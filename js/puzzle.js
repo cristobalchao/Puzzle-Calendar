@@ -4,7 +4,7 @@
  *
  * 
  *
- * 2013 Cristobal Chao
+ *  Cristobal Chao
  * 
  **/
 
@@ -34,22 +34,22 @@ Puzzle.prototype = {
     		this.input[i].id = j++;
     	}
 
-    	//Initializing Grid : Two-dimensional Array which saves the events according to their column on the layout
+    	//Initializing Grid : Two-dimensional Array which saves the events according to their column on the layout ( level array )
     	this.grid[0] = [];
 
     	$('#container').html('');
  	},
- 	createGrid: function(){ // Sweep the input data and storing in the Grid
- 		for(var i = 0; i < this.input.length; i++){
- 			for(var j = 0; j < this.grid.length; j++){
+ 	createGrid: function(){
+ 		for(var i = 0; i < this.input.length; i++){ // Sweeping the input data
+ 			for(var j = 0; j < this.grid.length; j++){ // Storing the input data in the Grid according to their respective column
  				if (!!!this.grid[j].length){
  					this.grid[j][0] = this.input[i];
  					break;
  				}else{
- 					if (this.input[i].start >= this.grid[j][parseInt(this.grid[j].length-1)].end){
+ 					if (this.input[i].start >= this.grid[j][parseInt(this.grid[j].length-1)].end){ // If the event is bigger than others at the same level, it belongs to this level
  						this.grid[j][this.grid[j].length] = this.input[i];
  						break;
- 					}else if(!!!this.grid[parseInt(j+1)]){
+ 					}else if(!!!this.grid[parseInt(j+1)]){ // If is not the biggest...BADD TAKEE A LOOOOOOK AND IMPROVE!!!!
  						this.grid[parseInt(j+1)] = [];
  						this.grid[parseInt(j+1)][0] = this.input[i];
  						break;
@@ -101,15 +101,6 @@ Puzzle.prototype = {
  		}
  	}
  }
-
-/**				INPUT				**/
-
-var events = [
-	{id: 0, start: 30, end: 150},
-    {id: 1, start: 540, end: 600},
-    {id: 2, start: 560, end: 620},
-    {id: 3, start: 610, end: 670}
-  ];
 
 $(window).load(function(){
 	var puzzle = new Puzzle(events);
